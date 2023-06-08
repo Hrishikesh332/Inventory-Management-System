@@ -1,7 +1,7 @@
 from django.shortcuts import render
-import requests
 from django.db import models
 from django.core.mail import send_mail
+from .models import Enquiry
 
 # class Enquiry(models.Model):
 #     name = models.CharField(max_length=255)
@@ -33,3 +33,19 @@ from django.core.mail import send_mail
 #     data = get_enquiry_data(form_url)
 #     save_enquiry_data(data)
 #     send_confirmation_email(data)
+
+def enquiry(request):
+    return render(request,'enquiry.html')
+
+def index(request):
+    if request.method=='POST':
+        enquiry=Enquiry()
+        enquiry.name=request.POST.get('name')
+        enquiry.email=request.POST.get('email')
+        enquiry.phone=request.POST.get('phone')
+        enquiry.enquiry_details=request.POST.get('enquiry_details')
+
+        enquiry.save()
+        return render(request,'index.html')
+    else:
+        return render(request,'enquiry.html')
