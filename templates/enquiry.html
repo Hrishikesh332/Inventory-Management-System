@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&family=Mukta:wght@200;300;400;500;600;700;800&family=Pangolin&family=Rubik:wght@300;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <title>Enquiry</title>
+    <link rel="stylesheet" href="{%static 'css/enquiry.css' %}">
+</head>
+
+<body class="enquiry">
+    <!-- This is enquiry page -->
+    <div class="container-1">
+        <div class="welcome">
+            <h1 class="text">Welcome to 📦 Inventary Management System! </h1>
+        </div>
+        <div class="subcontainer">
+            <h1>Enquiry</h1>
+            <form action="/" method="POST" >
+                {% csrf_token %}
+                <div>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" class="input">
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" class="input">
+                </div>
+                <div>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone" class="input">
+                </div>
+                <div>
+                    <textarea name="enquiry_details" id="enquiry_details" cols="30" rows="10"
+                        placeholder="Enter your Enquiry" class="inputbig"></textarea>
+                </div>
+                <div>
+                    <button type="submit" class="btn" value="Submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
