@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.db import models
 from django.core.mail import send_mail
 from .models import Enquiry
+import uuid
 
 # class Enquiry(models.Model):
 #     name = models.CharField(max_length=255)
@@ -28,11 +29,7 @@ from .models import Enquiry
 #     message = f'Your enquiry has been received. Your enquiry number is {enquiry.enquiry_number} and your quotation number is {enquiry.quotation_number}.'
 #     send_mail(subject, message, 'no-reply@example.com', [enquiry.email])
 
-# def main():
-#     form_url = 'https://docs.google.com/forms/d/e/1FAIpQLSfxutpV5s03otr0wEz_pytrBnW8f78LEj08YtFcKZ79mSf1fQ/viewform?usp=sf_link'
-#     data = get_enquiry_data(form_url)
-#     save_enquiry_data(data)
-#     send_confirmation_email(data)
+
 
 def enquiry(request):
     return render(request,'enquiry.html')
@@ -45,7 +42,24 @@ def index(request):
         enquiry.phone=request.POST.get('phone')
         enquiry.enquiry_details=request.POST.get('enquiry_details')
 
+        # Generate enquiry number
+        enquiry_no = str(uuid.uuid4())
+        # enquiry.enquiry_no = enquiry_no  
+
+        quotation_no = str(uuid.uuid4())
+        quotation_no = "QN-" + name[:3]+ quotation_no[:8]
+        print(enquiry_no, quotation_no)
+
         enquiry.save()
         return render(request,'index.html')
     else:
         return render(request,'enquiry.html')
+
+
+# def sendmail(id):
+
+#     user=Enquirys.objects.all().values()
+
+#     if (user['name']==True):
+#         html_content = render_to_string("app/email.html", {'title':'Confirmation mail', 'name':user['email']})
+#         text_conte
