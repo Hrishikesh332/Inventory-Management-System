@@ -43,12 +43,13 @@ def index(request):
         enquiry.enquiry_details=request.POST.get('enquiry_details')
 
         # Generate enquiry number
-        enquiry_no = str(uuid.uuid4())
+        enquiry.enquiry_no = str(uuid.uuid4())
         # enquiry.enquiry_no = enquiry_no  
 
         quotation_no = str(uuid.uuid4())
-        quotation_no = "QN-" + name[:3]+ quotation_no[:8]
-        print(enquiry_no, quotation_no)
+        quotation_no = "QN-" + enquiry.name[:6]+ quotation_no[:4]
+        enquiry.quotation_no = quotation_no
+        # print(enquiry_no, quotation_no)
 
         enquiry.save()
         return render(request,'index.html')
