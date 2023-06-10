@@ -17,14 +17,14 @@
 </head>
 
 <body class="enquiry">
-    <!-- This is enquiry page -->
+ {% include 'navbar.html' %}
     <div class="container-1">
         <div class="welcome">
             <h1 class="text">Welcome to 📦 Inventary Management System! </h1>
         </div>
         <div class="subcontainer">
             <h1>Enquiry</h1>
-            <form action="/" method="POST" >
+            <form action="" method="POST" >
                 {% csrf_token %}
                 <div>
                     <input type="text" name="name" id="name" placeholder="Enter your name" class="input">
@@ -45,6 +45,7 @@
             </form>
         </div>
     </div>
+    {% include 'footer.html' %}
 </body>
 
 </html>
