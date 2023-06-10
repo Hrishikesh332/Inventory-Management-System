@@ -1,14 +1,116 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    This is Home page
-    <p>Go to enquiry </p>
-    <a href="enquiry">Enquiry</a>
-</body>
-</html>
+{% include 'messages.html'%}
+{% include 'navbar.html'%}
+{% load static %}
+
+    <!-- header -->
+    <header>
+        
+        <div class="container header-section flex">
+            <!-- header left section -->
+            <div class="header-left-section">
+                <h1>Lorem, ipsum.</h1>
+                <p>ULorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ratione, impedit tempore dolore amet natus.</p>
+                <a href="#" class="primary-btn get-strated-btn">Get Started</a>
+            </div>
+            <!-- header right section -->
+            <div class="header-right-section">
+                <img src="{%static 'assets/asset 2.jpeg'%}" alt="hero image">
+            </div>
+        </div>
+    </header>
+
+    <!-- companies section -->
+    <section class="companies-section">
+        <div class="container companies-heading">
+
+            <div class="companies-logos flex">
+               
+            </div>
+        </div>
+    </section>
+
+ 
+
+    <!-- first  big-features-section -->
+    <section class="big-features-section">
+        <div class="container big-features-section-container flex">
+            <!-- big-features-section-left -->
+            <div class="big-features-section-left">
+                <div class="feature-img">
+                    <img src="{%static 'assets/asset 18.png' %}" alt="">
+                </div>
+            </div>
+            <!-- big-features-section-right -->
+            <div class="big-features-section-right">
+                <h3>Personalized Enquiry system</h3>
+                <p>Customers can submit their product details in our website itself
+                    No need to use other Social media platforms.</p>
+            </div>
+        </div>
+    </section>
+    <!-- second big feature section -->
+    <section class="big-features-section">
+        <div class="container big-features-section-container flex" id="second-big-feature-section-img">
+            <!-- big-features-section-left -->
+            <div class="big-features-section-left">
+                <div class="feature-img">
+                    <img src="{%static 'assets/asset21.png' %}" alt="">
+                </div>
+            </div>
+            <!-- big-features-section-right -->
+            <div class="big-features-section-right">
+                <h3>We value your conversation</h3>
+                <p>Customers can anytime see the Enquiry communication at our chat section </p>
+            </div>
+        </div>
+    </section>
+    <!-- third big features section -->
+    <section class="big-features-section">
+        <div class="container big-features-section-container flex">
+            <!-- big-features-section-left -->
+            <div class="big-features-section-left">
+                <div class="feature-img">
+                    <img src="{%static 'assets/asset 24.png' %}" alt="">
+                </div>
+            </div>
+            <!-- big-features-section-right -->
+            <div class="big-features-section-right">
+                <h3>We fullfil customer's requirement </h3>
+                <p>Customers can continue the enquiry until they are satisfied with the quotation</p>
+            </div>
+        </div>
+    </section>
+
+     <!-- fourth big features section -->
+     <section class="big-features-section">
+        <div class="container big-features-section-container flex" id="second-big-feature-section-img">
+            <!-- big-features-section-left -->
+            <div class="big-features-section-left">
+                <div class="feature-img">
+                    <img src="{%static 'assets/asset 21.png' %}" alt="">
+                </div>
+            </div>
+            <!-- big-features-section-right -->
+            <div class="big-features-section-right">
+
+                <h3>
+                    Shipment choices</h3>
+                <p>We have many Shipment options available, customers can select any as per their comfort</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Example section -->
+ 
+    <!-- cta section -->
+    <section class="cta-section">
+        <div class="container flex cta-section-container">
+            <h2>Start using today</h2>
+            <p>Trusted by 10,000+ Indian Manufacturers</p>
+            <a href="#" class="primary-btn">Get started</a>
+        </div>
+    </section>
+
+
+{% include 'footer.html'%}

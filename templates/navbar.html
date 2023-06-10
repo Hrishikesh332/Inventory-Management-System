@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page  title -->
+    <title>Inventory Management System</title>
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="{%static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{%static 'css/media Quries.css' %}">
+</head>
+<body>
+    <!-- nav-bar -->
+    <nav>
+        <div class="container main-nav flex">
+            <!-- company logo -->
+            <a href="/" class="company-logo">
+                Inventory
+            </a>
+            <div class="nav-links" id="nav-links">
+                <ul class="flex">
+                    <li><a href="enquiry" class="hover-link ">Enquiry</a>
+                        <div class = "product-sub-menu dropdown-list " id="dropdown">
+                            <ul>
+                                
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li><a href="#" class="hover-link">About Us</a></li>
+                    <li><a href="#" class="hover-link">Contact Us</a></li>
+                        <div class="resources-sub-menu dropdown-list">
+                            <ul>
+                                <li><a class="hover-link" href="#">Examples</a></li>
+                                <li><a class="hover-link" href="#">Testing guides</a></li>
+                                <li><a class="hover-link" href="#">help center</a></li>
+                                <li><a class="hover-link" href="#">Blog</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#" class="hover-link secondary-btn menu-btn">Sign in</a></li>
+                    <li><a href="#" class="hover-link primary-btn menu-btn">Sign up</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-hamburger hover-link" id="humburger-toggle-btn">
+                <!-- humburger icon -->
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+        
+    </nav>

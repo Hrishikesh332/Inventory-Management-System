@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.db import models
+from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 from .models import Enquiry
+from django.contrib import messages
 import uuid
+
 
 # class Enquiry(models.Model):
 #     name = models.CharField(max_length=255)
@@ -31,10 +32,10 @@ import uuid
 
 
 
-def enquiry(request):
-    return render(request,'enquiry.html')
-
 def index(request):
+    return render(request,'index.html')
+
+def enquiry(request):
     if request.method=='POST':
         enquiry=Enquiry()
         enquiry.name=request.POST.get('name')
@@ -49,10 +50,10 @@ def index(request):
         quotation_no = str(uuid.uuid4())
         quotation_no = "QN-" + enquiry.name[:6]+ quotation_no[:4]
         enquiry.quotation_no = quotation_no
-        # print(enquiry_no, quotation_no)
-
+        # print(enquiry.quotation_no)
         enquiry.save()
-        return render(request,'index.html')
+        messages.success(request, "Enquiry Sent Succesfully." )
+        return redirect ('/')
     else:
         return render(request,'enquiry.html')
 
@@ -64,3 +65,10 @@ def index(request):
 #     if (user['name']==True):
 #         html_content = render_to_string("app/email.html", {'title':'Confirmation mail', 'name':user['email']})
 #         text_conte
+
+
+
+
+# Defining employees function
+def emp(request):
+    return render(request,'chat/index.html')
