@@ -4,6 +4,42 @@ from .models import Enquiry
 from django.contrib import messages
 import uuid
 
+from django.conf import settings
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+import requests
+import json
+import os
+from .models import Enquiry
+
+
+def sendmail(enquiry_no):
+    #email section
+    user = Enquiry.objects.all().values().last()
+    # if(user['enquiry_no']==True):
+
+    print(user,"<<< data")
+    print("++++++++++++++++++++++++++++++++++++++++", user['email'])
+    html_content =render_to_string("email.html",{'title':'Conformation mail', 'name':user['name'] , 'detail':user['enquiry_details'], 'email':user['email'], 'enquiry_no':user['enquiry_no'], 'quotation_no':user['quotation_no'] })
+    text_content =strip_tags(html_content)
+    email=EmailMultiAlternatives(
+            #subject
+            "Enquiry Recived",
+            #content
+            "Thank you, for filling the form",
+            #from email
+            "hriskikesh.yadav332@gmail.com",
+            #rec_list
+            [user['email']])
+    email.attach_alternative(html_content,"text/html")
+    email.send()
+    # else:
+    #     print("Email not send")
+
+
+
+
 
 # class Enquiry(models.Model):
 #     name = models.CharField(max_length=255)
@@ -53,6 +89,7 @@ def enquiry(request):
         # print(enquiry.quotation_no)
         enquiry.save()
         messages.success(request, "Enquiry Sent Succesfully." )
+        sendmail(enquiry.enquiry_no)
         return redirect ('/')
     else:
         return render(request,'enquiry.html')
