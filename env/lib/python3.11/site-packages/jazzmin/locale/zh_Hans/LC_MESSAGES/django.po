@@ -1,0 +1,78 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-03 17:04+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: templates/admin/base.html:125
+msgid "Account"
+msgstr "账户"
+
+#: templates/admin/base.html:143
+msgid "See Profile"
+msgstr "查看个人资料"
+
+#: templates/admin/base.html:183 templates/admin/index.html:6
+#: templates/admin/index.html:11
+msgid "Dashboard"
+msgstr "仪表盘"
+
+#: templates/admin/base.html:294
+msgid "Jazzmin version"
+msgstr "Jazzmin 版本"
+
+#: templates/admin/base.html:297
+msgid "Copyright"
+msgstr "版权"
+
+#: templates/admin/base.html:297
+msgid "All rights reserved."
+msgstr "保留所有权利。"
+
+#: templates/admin/base.html:313
+msgid "UI Configuration"
+msgstr "UI配置"
+
+#: templates/admin/base.html:317
+msgid "Copy this info your settings file to persist these UI changes"
+msgstr "将此信息复制到您的设置文件以保留这些UI更改"
+
+#: templates/admin/index.html:90
+#| msgid "%(entry.action_time|timesince)s ago"
+msgid "%(timesince)s ago"
+msgstr "%(timesince)s 前"
+
+#: templates/admin/submit_line.html:8
+msgid "Actions"
+msgstr "动作"
+
+#: templates/admin_doc/template_filter_index.html:37
+#: templates/admin_doc/view_index.html:43
+#, python-format
+msgid ""
+"View function: <code>%(full_name)s</code>. Name: <code>%(url_name)s</code>."
+msgstr "查看函数：<code>%(full_name)s</code>. 名字：<code>%(url_name)s</code>。"
+
+#: templatetags/jazzmin.py:390
+#, fuzzy, python-brace-format
+msgid "Added {name} “{object}”."
+msgstr "添加了 {name}“{object}”。"
+
+#: templatetags/jazzmin.py:406
+#, python-brace-format
+msgid "Deleted “{object}”."
+msgstr "删除了“{object}”。"
+
+#: utils.py:66
+#, python-brace-format
+msgid "Could not reverse url from {instance}"
+msgstr "无法从{instance}中反转URL"
