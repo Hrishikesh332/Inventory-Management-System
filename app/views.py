@@ -70,5 +70,6 @@ def enquiry(request):
 
 
 # Defining employees function
-def emp(request):
-    return render(request,'chat/index.html')
+def emp1(request):
+    eq=Enquiry.objects.all()
+    return render(request,'chat/emp1.html',{'eq':eq})
