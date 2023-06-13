@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+load_dotenv('.env')
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,18 +29,27 @@ SECRET_KEY = 'django-insecure-0oj(ji$na)bfp-y9)+l=81)o^rn&sfxntv__!kv_#k&d+t@$^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER= 'bholugaur178@gmail.com'
+EMAIL_HOST_PASSWORD = 'Bholu@178'
+EMAIL_PORT=587
+EMAIL_USE_TLS=True
+EMAIL_BACKEND ='django.core.mail.backends.smtp.EmailBackend'
+
 ALLOWED_HOSTS = []
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'app'
 ]
 
 MIDDLEWARE = [
@@ -54,7 +67,7 @@ ROOT_URLCONF = 'inventory.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,6 +81,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'inventory.wsgi.application'
+ASGI_APPLICATION = 'inventory.asgi.application'
 
 
 # Database
@@ -116,8 +130,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static"),]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+#EMAIL CONFIGURATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = os.environ['EMAIL']
+EMAIL_HOST_PASSWORD = os.environ['PASSWORD']

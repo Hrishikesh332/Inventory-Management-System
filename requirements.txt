@@ -1,0 +1,17 @@
+asgiref==3.7.2
+certifi==2023.5.7
+channels==4.0.0
+charset-normalizer==3.1.0
+Django==4.1.7
+django-core==1.4.1
+django-db==0.0.7
+django-jazzmin==2.6.0
+djangorestframework==3.14.0
+idna==3.4
+psycopg2-binary==2.9.6
+PyMySQL==1.0.3
+python-dotenv==1.0.0
+pytz==2023.3
+requests==2.31.0
+sqlparse==0.4.4
+urllib3==2.0.3

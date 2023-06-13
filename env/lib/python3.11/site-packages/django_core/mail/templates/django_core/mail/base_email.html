@@ -1,0 +1,17 @@
+{% comment %}
+This is a base email template that can be extended or used directly for an html 
+email.
+
+If extending, your template should use the "email_content" block for the main 
+contents of the email.
+
+If using directly, pass the "email_content" in your context which is the 
+rendered html markup.
+{% endcomment %}
+{% autoescape off %}
+<html>
+<body>
+    {% block email_content %}{% endblock %}{{ email_content }}
+</body>
+</html>
+{% endautoescape %}
