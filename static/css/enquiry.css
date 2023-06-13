@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.enquiry{
+    background-color: black;
+}
+.container-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.welcome{
+    text-align: center;
+}
+.text{
+    color: white;
+    font-size: 75px;
+    font-weight: bold;
+    margin: 10px;
+
+}
+.subcontainer{
+    text-align: center;
+}
+.input{
+    width: 100%;
+    height: 50px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 5px;
+    background-color: black;
+    color: grey;
+    text-align: center;
+}
+.inputbig{
+    width: 100%;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid grey;
+    margin: 10px;
+    padding: 5px;
+    color: grey;
+    text-align: center;
+    background-color: black;
+}
+.btn{
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px;
+    background-color: #6723ff;
+    color: white;
+    font-weight: bold;
+}
+
+/* Responsive  */
+
+@media screen and (max-width: 768px){
+    .input{
+        width: 80%;
+    }
+    .inputbig{
+        width: 80%;
+    }
+    .btn{
+        width: 80%;
+    }
+    .container-1{
+        display: block;
+    }
+}
