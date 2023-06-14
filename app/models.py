@@ -9,6 +9,9 @@ class Enquiry(models.Model):
     enquiry_no=models.CharField(max_length=255,default="")
     quotation_no=models.CharField(max_length=255,default="")
 
+
+
+
     def __str__(self):
         return "{self.name}  {self.quotation_no}".format(self=self)
 
