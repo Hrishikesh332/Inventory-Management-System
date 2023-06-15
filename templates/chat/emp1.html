@@ -23,7 +23,7 @@
                 <img src="images/logo.png" alt="">
             </div>
 
-            <span class="logo_name">CodingLab</span>
+            <span class="logo_name">Admin</span>
         </div>
 
         <div class="menu-items">
@@ -34,7 +34,7 @@
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-files-landscapes"></i>
-                        <span class="link-name">Content</span>
+                        <span class="link-name">Chat</span>
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-chart"></i>
@@ -42,16 +42,16 @@
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-thumbs-up"></i>
-                        <span class="link-name">Like</span>
+                        <span class="link-name">Add Enquiry</span>
                     </a></li>
-                <li><a href="#">
+                <!-- <li><a href="#">
                         <i class="uil uil-comments"></i>
                         <span class="link-name">Comment</span>
                     </a></li>
                 <li><a href="#">
                         <i class="uil uil-share"></i>
                         <span class="link-name">Share</span>
-                    </a></li>
+                    </a></li> -->
             </ul>
 
             <ul class="logout-mode">
@@ -77,10 +77,6 @@
     <section class="dashboard">
 
         <div class="top">
-            {% for eqs in eq %}
-            {{eqs.name}},{{eqs.phone}},{{eqs.email}}, {{eqs.enquiry_details}}
-            <br>
-            {% endfor %}
             <i class="uil uil-bars sidebar-toggle"></i>
 
             <div class="search-box">
@@ -126,53 +122,26 @@
                 <div class="activity-data">
                     <div class="data names">
                         <span class="data-title">Name</span>
-                        <span class="data-list">Prem Shahi</span>
-                        <span class="data-list">Deepa Chand</span>
-                        <span class="data-list">Manisha Chand</span>
-                        <span class="data-list">Pratima Shahi</span>
-                        <span class="data-list">Man Shahi</span>
-                        <span class="data-list">Ganesh Chand</span>
-                        <span class="data-list">Bikash Chand</span>
+                        {% for eqs in eq %}
+                        <span class="data-list">
+                            {{eqs.name}}
+                        </span> {% endfor %}
                     </div>
                     <div class="data email">
                         <span class="data-title">Email</span>
-                        <span class="data-list">premshahi@gmail.com</span>
-                        <span class="data-list">deepachand@gmail.com</span>
-                        <span class="data-list">prakashhai@gmail.com</span>
-                        <span class="data-list">manishachand@gmail.com</span>
-                        <span class="data-list">pratimashhai@gmail.com</span>
-                        <span class="data-list">manshahi@gmail.com</span>
-                        <span class="data-list">ganeshchand@gmail.com</span>
+                        {% for eqs in eq %}
+                        <span class="data-list">{{eqs.email}}</span> {% endfor %}
+
                     </div>
-                    <div class="data joined">
-                        <span class="data-title">Joined</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-12</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-13</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-14</span>
-                        <span class="data-list">2022-02-15</span>
+                    <div class="data phone">
+                        <span class="data-title">Phone</span>
+                        {% for eqs in eq %}
+                        <span class="data-list"> {{eqs.phone}} </span> {% endfor %}
                     </div>
                     <div class="data type">
-                        <span class="data-title">Type</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                        <span class="data-list">New</span>
-                        <span class="data-list">Member</span>
-                    </div>
-                    <div class="data status">
-                        <span class="data-title">Status</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
-                        <span class="data-list">Liked</span>
+                        <span class="data-title">Enquiry Number</span>
+                        {% for eqs in eq %}
+                        <span class="data-list">{{eqs.enquiry_no}}</span> {% endfor %}
                     </div>
                 </div>
             </div>
