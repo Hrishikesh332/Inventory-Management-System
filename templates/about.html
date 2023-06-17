@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <!-- <link rel="stylesheet" href="about.css"> -->
+    <!-- <link rel="stylesheet" href="{%static 'css/about.css' %}"> -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>This is an Inventary management System</h3>
+                    <p>
+                      In this place the number of items present in the Inventary would kept and how much quantity they are present in.This would orginize and automate the workspace and help for better mangement of the items.This would not only increse efficiancy but also lower the chances of surplus items.The items can 
+                      be better manged and organized 
+                    </p>
+                    <div class="button">
+                        <a href="">Read More </a>
+                    </div>
+                    <p>These are the social media accouts for connecting with us</p>
+                    <div class="social">
+                        <a href=""> <i class="fab fa-facebook-f"></i></a>
+                        <a href=""> <i class="fab fa-twitter"></i></a>
+                        <a href=""> <i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="image-section">
+                    <img src="{%static 'assets/about-removebg-preview.png' %}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+</html>

@@ -133,7 +133,8 @@ def enquiry(request):
     else:
         return render(request,'enquiry.html')
 
-
+def about(request):
+    return render(request,'about.html')
 
 # def sendmail(id):
 
@@ -150,3 +151,4 @@ def enquiry(request):
 def emp1(request):
     eq=Enquiry.objects.all()
     return render(request,'chat/emp1.html',{'eq':eq})
+

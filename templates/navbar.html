@@ -20,34 +20,32 @@
                 Inventory
             </a>
             <div class="nav-links" id="nav-links">
-                <ul class="flex">
-                    <li><a href="enquiry" class="hover-link ">Enquiry</a>
-                        <div class = "product-sub-menu dropdown-list " id="dropdown">
-                            <ul>
-                                
-                            </ul>
-                        </div>
-
-                    </li>
-                    <li><a href="#" class="hover-link">About Us</a></li>
-                    <li><a href="#" class="hover-link">Contact Us</a></li>
-                        <div class="resources-sub-menu dropdown-list">
-                            <ul>
-                                <li><a class="hover-link" href="#">Examples</a></li>
-                                <li><a class="hover-link" href="#">Testing guides</a></li>
-                                <li><a class="hover-link" href="#">help center</a></li>
-                                <li><a class="hover-link" href="#">Blog</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                <ul class="flex navbar-menu">
+                    <li><a href="enquiry" class="hover-link ">Enquiry</a></li>
+                    <li><a href="about" class="hover-link">About Us</a></li>
+                    <li><a href="#" class="hover-link">Contact Us</a></li></li>
                     <li><a href="{% url 'login' %}" class="hover-link secondary-btn menu-btn">Sign in</a></li>
                     <li><a href="{% url 'signup' %}" class="hover-link primary-btn menu-btn">Sign up</a></li>
                 </ul>
             </div>
+            <!-- <button type="button" class="nav-hamburger hover-link" id="humburger-toggle-btn">
+                humburger icon
+                <i class="fa-solid fa-bars"></i>
+            </button> -->
             <a href="#" class="nav-hamburger hover-link" id="humburger-toggle-btn">
                 <!-- humburger icon -->
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
-        
+        <!-- <script>
+            const hamburgerToggleBtn = document.getElementById('hamburger-toggle-btn');
+            const navLinks = document.getElementById('nav-links');
+    
+            hamburgerToggleBtn.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+        </script> -->
     </nav>
+
+    

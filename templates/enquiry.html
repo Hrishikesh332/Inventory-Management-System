@@ -33,14 +33,15 @@
                     <input type="email" name="email" id="email" placeholder="Enter your email" class="input">
                 </div>
                 <div>
-                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone" class="input">
+                    <!-- <input type="tel" pattern="[0-9]{10}" name="phone" maxlength="10" id="phone" placeholder="Enter your phone" class="input"> -->
+                    <input type="tel"  name="phone" maxlength="10" id="phone" pattern="[0-9]{10}" title="Ten digits code  Eg : 081 222 2224 " placeholder="Enter your phone" class="input"  >
                 </div>
                 <div>
                     <textarea name="enquiry_details" id="enquiry_details" cols="30" rows="10"
                         placeholder="Enter your Enquiry" class="inputbig"></textarea>
                 </div>
                 <div>
-                    <button type="submit" class="btn" value="Submit">Submit</button>
+                    <button type="submit" class="btn hover-btn" value="Submit">Submit</button>
                 </div>
             </form>
         </div>

@@ -3,6 +3,23 @@
         display: block;
         margin-right: 20px;
     }
+    /* for navbar toggle */
+    /* nav-links.active {
+        left: 0%;
+    }
+
+    Additional styles for the toggled menu
+    .nav-links ul {
+        display: block;
+        height: auto;
+        padding-inline-start: 0;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+        padding-inline: 0;
+    }    */
+    /*  */
     .dropdown-list{
         left: 0%;
         top: 10%;
@@ -144,6 +161,7 @@
         display: flex;
         justify-content: center;
         align-items: stretch;
+        padding-top: 0;
     }
 }
 
