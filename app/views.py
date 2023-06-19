@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect,HttpResponse
 from django.core.mail import send_mail
 from .models import Enquiry
 from django.contrib import messages
@@ -150,3 +150,7 @@ def enquiry(request):
 def emp1(request):
     eq=Enquiry.objects.all()
     return render(request,'chat/emp1.html',{'eq':eq})
+
+
+def chatemp1(request):
+    return render(request,'chat/chatemp1.html')
